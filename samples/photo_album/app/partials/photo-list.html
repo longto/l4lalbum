@@ -35,6 +35,7 @@
     <a cl-href="{{photo.public_id}}" format="jpg" target="_blank">
       <cl-image public-id="{{photo.public_id}}" class="thumbnail inline" width="150" height="150" crop="fit" quality="80" format="jpg"/>
     </a>
+    <input type="text" readonly="readonly" value="http://res.cloudinary.com/l4limedia/image/upload/{{photo.public_id}}.jpg"/>
 
     <div class="less_info">
       <button class="toggle_info" style="cursor: true" ng-click="shown=true" ng-init="shown=false" ng-show="shown === false">Show transformations</button>
