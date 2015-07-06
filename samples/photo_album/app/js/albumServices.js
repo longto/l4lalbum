@@ -1,6 +1,6 @@
 'use strict';
 
-var photoAlbumServices = angular.module('photoAlbumServices', ['ngResource']);
+var photoAlbumServices = angular.module('albumServices', ['ngResource']);
 
 photoAlbumServices.factory('album', ['$rootScope', '$resource',
   function($rootScope, $resource){
