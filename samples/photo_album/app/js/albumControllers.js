@@ -2,12 +2,11 @@
 
 /* Controllers */
 
-var albumControllers = angular.module('albumControllers', ['angularFileUpload']);
-
-albumControllers.config(['$routeProvider',
+angular.module('albumControllers', ['angularFileUpload'])
+.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.when('/photos', {
-            templateUrl: 'partials/photo-list.html',
+            templateUrl: 'partials/album.html',
             resolve: {
                 photoList: function($q, $rootScope, album) {
                     if (!$rootScope.serviceCalled) {
@@ -23,8 +22,7 @@ albumControllers.config(['$routeProvider',
         });
     }
 ])
-
-albumControllers.controller('photoUploadCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$upload',
+.controller('photoUploadCtrl', ['$scope', '$rootScope', '$routeParams', '$location', '$upload',
     /* Uploading with Angular File Upload */
     function($scope, $rootScope, $routeParams, $location, $upload) {
 
